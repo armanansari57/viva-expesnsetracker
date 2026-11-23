@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f3ee;
+    color: #252923;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    background: #fbfbf8;
+    border: 1px solid #e5e7df;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+header {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8e9e3;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #536b50;
+}
+
+.date {
+    color: #777d73;
+    font-size: 13px;
+}
+
+main {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777d73;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e8e9e3;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.card.primary {
+    background: #edf2e9;
+}
+
+.card p {
+    color: #777d73;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    font-size: 23px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #e8e9e3;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 0;
+}
+
+h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 7px;
+    color: #62685f;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #dfe2da;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    outline: none;
+    font-size: 13px;
+    background: white;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus {
+    border-color: #536b50;
+}
+
+button {
+    background: #536b50;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:hover {
+    background: #40563e;
+}
+
+.add-btn {
+    width: 100%;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.list-header h3 {
+    margin: 0;
+}
+
+.filter {
+    width: 135px;
+    margin: 0;
+    padding: 9px;
+}
+
+.expense {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 2px;
+    border-top: 1px solid #e8e9e3;
+    gap: 10px;
+}
+
+.expense-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.expense-icon {
+    background: #f1f2ed;
+    padding: 11px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.expense-details {
+    min-width: 0;
+}
+
+.expense-name {
+    font-size: 14px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.expense-category {
+    font-size: 11px;
+    color: #777d73;
+    margin-top: 5px;
+}
+
+.expense-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.expense-amount {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.delete-btn {
+    background: transparent;
+    color: #b85d4b;
+    font-size: 18px;
+    padding: 3px 7px;
+}
+
+.delete-btn:hover {
+    background: #f8eeeb;
+}
+
+.empty {
+    text-align: center;
+    padding: 35px 10px;
+    color: #777d73;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card.primary {
+        grid-column: span 2;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    header {
+        padding: 20px;
+    }
+
+    .date {
+        display: none;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+
+    .expense {
+        gap: 5px;
+    }
+
+    .expense-right {
+        gap: 5px;
+    }
+
+    .expense-amount {
+        font-size: 12px;
+    }
+}
